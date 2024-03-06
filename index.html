@@ -1,56 +1,72 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="https://stiven70.github.io/LandingPageFormulario/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Rodada</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Formulario de Registro</h1>
-        <form id="registroForm" enctype="multipart/form-data">
-            <input type="hidden" id="fechaHora" name="fechaHora">
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="email">Ride Master/Lider:</label>
-            <div class="opciones">
-                <label>
-                    <input type="radio" name="opcion" value="opcion1">
-                    <img src="https://stiven70.github.io/LandingPageFormulario/imagen1.jpg" alt="Opción 1">
-                    <span>Opción 1</span>
-                </label>
-                <label>
-                    <input type="radio" name="opcion" value="opcion1">
-                    <img src="https://stiven70.github.io/LandingPageFormulario/imagen1.jpg" alt="Opción 1">
-                    <span>Opción 2</span>
-                </label>
-                <label>
-                    <input type="radio" name="opcion" value="opcion1">
-                    <img src="https://stiven70.github.io/LandingPageFormulario/imagen1.jpg" alt="Opción 1">
-                    <span>Opción 3</span>
-                </label>
-                <!-- Repite esta estructura para cada opción -->
-                <!-- Por ejemplo, copia y pega este bloque 12 veces -->
-            </div>
-            <br>
-            <label for="rodada">Nombre de la Rodada:</label>
-            <input type="text" id="rodada" name="rodada" required>
-            <br>
-            <label for="inicio">Fecha de inicio:</label>
-            <input type="date" id="inicio" name="inicio" required/>
-            <br>
-            <label for="fin">Fecha de Finalización:</label>
-            <input type="date" id="fin" name="fin" required/>
-            <br>
-            <label for="imagenes">Subir Imágenes:</label>
-            <input type="file" id="imagenes" name="imagenes" accept="image/*" multiple>
-            <br>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
 
-    <script src="script.js"></script>
+<div class="container mt-5">
+  <h2>Formulario de Rodada</h2>
+  <form>
+    <!-- Input de correo electrónico -->
+    <div class="form-group">
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico">
+    </div>
+    
+    <!-- Input radio para seleccionar persona -->
+    <div class="form-group">
+      <label>Selecciona una persona:</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="persona" id="persona1" value="persona1">
+        <label class="form-check-label" for="persona1">
+          Nombre Persona 1
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="persona" id="persona2" value="persona2">
+        <label class="form-check-label" for="persona2">
+          Nombre Persona 2
+        </label>
+      </div>
+    </div>
+    
+    <!-- Input para el nombre de la rodada -->
+    <div class="form-group">
+      <label for="nombreRodada">Nombre de la Rodada:</label>
+      <input type="text" class="form-control" id="nombreRodada" placeholder="Ingresa el nombre de la rodada">
+    </div>
+    
+    <!-- Input para la fecha de inicio -->
+    <div class="form-group">
+      <label for="fechaInicio">Fecha de Inicio:</label>
+      <input type="date" class="form-control" id="fechaInicio">
+    </div>
+    
+    <!-- Input para la fecha final -->
+    <div class="form-group">
+      <label for="fechaFinal">Fecha Final:</label>
+      <input type="date" class="form-control" id="fechaFinal">
+    </div>
+    
+    <!-- Input para subir una imagen -->
+    <div class="form-group">
+      <label for="imagen">Subir Imagen:</label>
+      <input type="file" class="form-control-file" id="imagen">
+    </div>
+    
+    <!-- Botón de envío -->
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS y dependencias -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
