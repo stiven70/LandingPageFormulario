@@ -4,6 +4,20 @@
     padding: 20px;
 }
 
+.opciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Muestra las opciones en 3 columnas */
+    grid-gap: 20px; /* Espacio entre las opciones */
+}
+
+label img {
+    width: 100px; /* Tamaño de la imagen */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; /* Forma redonda para la imagen */
+    margin-bottom: 5px; /* Espacio entre la imagen y el texto */
+}
+
 label {
     display: block;
     margin-bottom: 5px;
